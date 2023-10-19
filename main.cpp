@@ -1,14 +1,14 @@
 #include <iostream>
-#include "Employe.h"
+#include "Classes/Employee.cpp"
 
 using namespace std;
 
-
-
 int main()
-{
-    int number = 10;
-    cout << "Number = " << number << endl;
+{    
+    Employee user;
+
+    user.print_info();
+
 
     return 0;
 }
