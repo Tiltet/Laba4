@@ -11,7 +11,7 @@ private:
 public:
     Employee();
 
-    void print_info();
+    void test_function();
 
     ~Employee();
 };

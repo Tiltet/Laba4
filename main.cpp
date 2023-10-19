@@ -5,6 +5,7 @@
 #include "Classes/Director.cpp"
 #include "Classes/Meneger.cpp"
 #include "Classes/Tester.cpp"
+#include "Classes/#COMPANY.h"
 
 using namespace std;
 
@@ -17,12 +18,16 @@ int main()
     Meneger meneger;
     Tester tester;
 
-    employee.print_info();
+    employee.test_function();
     admin.test_function();
     developer.test_function();
     director.function_test();
     meneger.funtcion_test();
     tester.funtcion_test();
+
+    Company google(&employee);
+
+    google.user->test_function();
 
     return 0;
 }

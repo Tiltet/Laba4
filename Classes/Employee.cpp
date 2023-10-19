@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void Employee::print_info()
+void Employee::test_function()
 {
-    cout << "Yes" << endl;
+    cout << "Employee" << endl;
 }

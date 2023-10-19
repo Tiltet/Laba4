@@ -5,6 +5,6 @@ using namespace std;
 
 void Tester::funtcion_test()
 {
-    cout << "Yes" << endl;
+    cout << "Tester" << endl;
     return;
 }
