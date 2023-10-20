@@ -2,14 +2,14 @@
 
 using namespace std;
 
-class Admin
+class Admin : public Employee
 {
 private:
     
 public:
     Admin();
 
-    void test_function();
+    void function_test();
 
     ~Admin();
 };

@@ -1,33 +1,35 @@
 #include <iostream>
+#include "Classes/#COMPANY.cpp"
 #include "Classes/Employee.cpp"
-#include "Classes/Admin.cpp"
 #include "Classes/Developer.cpp"
+#include "Classes/Admin.cpp"
 #include "Classes/Director.cpp"
 #include "Classes/Meneger.cpp"
 #include "Classes/Tester.cpp"
-#include "Classes/#COMPANY.h"
 
 using namespace std;
 
 int main()
 {    
-    Employee employee;
-    Admin admin;
-    Developer developer;
-    Director director;
-    Meneger meneger;
-    Tester tester;
+    system("clear");
+    vector<company_info> info;
 
-    employee.test_function();
-    admin.test_function();
-    developer.test_function();
-    director.function_test();
-    meneger.funtcion_test();
-    tester.funtcion_test();
+    // Admin admin;
+    // Director director;
+    // Meneger meneger;
+    // Tester tester;
+ 
+    // admin.test_function();
+    // developer.test_function();
+    // director.function_test();
+    // meneger.funtcion_test();
+    // tester.funtcion_test();
 
-    Company google(&employee);
+    Company google;
 
-    google.user->test_function();
+    google.menu(1);
+
+    // google.print_messages();
 
     return 0;
 }

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void Meneger::funtcion_test()
+void Meneger::function_test()
 {
     cout << "Meneger" << endl;
     return;

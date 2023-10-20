@@ -4,6 +4,15 @@
 
 using namespace std;
 
+struct company_info
+{
+    int id;
+    string name;
+};
+
+
+using namespace std;
+
 class Employee
 {
 private:
@@ -11,7 +20,9 @@ private:
 public:
     Employee();
 
-    void test_function();
+    virtual void function_test() = 0;
+    virtual void print_your_projects() = 0;
+    virtual void menu() = 0;
 
     ~Employee();
 };

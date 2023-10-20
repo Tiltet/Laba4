@@ -8,7 +8,11 @@ private:
 public:
     Tester();
 
-    void funtcion_test();
+    void function_test(); // виртуальная функция Employee
+    void print_your_projects(); // виртуальная функция Employee для вывода все проектов сотрудника
+    void menu(); // виртуальная функция Employee для меню
+
+    void tester_function(); // тестовая функция Tester
 
     ~Tester();
 };

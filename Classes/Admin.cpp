@@ -2,8 +2,8 @@
 
 using namespace std;
 
-void Admin::test_function()
+void Admin::function_test()
 {
-    cout << "Test" << endl;
+    cout << "Admin" << endl;
     return;
 }

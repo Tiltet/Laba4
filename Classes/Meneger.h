@@ -3,22 +3,24 @@
 
 using namespace std;
 
-class Meneger
+class Meneger : public Employee
 {
 private:
     
 public:
     Meneger();
 
-    void funtcion_test();
+    void function_test();
 
     ~Meneger();
 };
 
 Meneger::Meneger()
 {
+
 }
 
 Meneger::~Meneger()
 {
+
 }
