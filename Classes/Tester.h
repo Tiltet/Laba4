@@ -1,28 +1,31 @@
 #pragma once
-#include <iostream>
+#include "Employee.cpp"
 
-class Tester
+class Tester : public virtual Employee
 {
 private:
     
 public:
-    Tester();
+    Tester(string name);
 
-    void function_test(); // виртуальная функция Employee
-    void print_your_projects(); // виртуальная функция Employee для вывода все проектов сотрудника
-    void menu(); // виртуальная функция Employee для меню
+    void print_all_user_project();      // ВИРТУАЛЬНАЯ ФУНКЦИЯ ДЛЯ ВЫВОДА ПРОЕКТОВ ЮЗЕРА
+    void menu();                        // ВИРТУАЛЬНАЯ ФУНКЦИЯ МЕНЮ ЮЗЕРА
+    void function_user();               // ВИРТУАЛЬНАЯ ФУНКЦИЯ
 
-    void tester_function(); // тестовая функция Tester
+    void change_test_status();          // ФУНКЦИЯ ИЗМЕНЕНИЯ test_status 
 
     ~Tester();
 };
 
-Tester::Tester()
+Tester::Tester(string name) : Employee(name)
 {
+    this->name = name;
+    cout << endl << "Конструктор Tester\n" << endl;
 
+    this->menu();
 }
 
 Tester::~Tester()
 {
-    
+
 }

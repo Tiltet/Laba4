@@ -1,74 +1,146 @@
 #pragma once
+#include <iostream>
 #include "Developer.h"
 
 using namespace std;
 
-// ВИРТУАЛЬНАЯ ФУНКЦИЯ Employee
-void Developer::function_test()
+// ВИРТУАЛЬНАЯ ФУНКЦИЯ ДЛЯ ВЫВОДА ПРОЕКТОВ Developer
+void Developer::print_all_user_project()
 {
-    cout << "Developer virtual function" << endl;
-    return;
-}
-// ВИРТУАЛЬНАЯ ФУНКЦИЯ Employee
+    cout << "Developer: " << this->name << endl
+         << endl;
 
-
-
-// УНИКАЛЬНЫЙ ВЫВОД
-void Developer::developer_function()
-{
-    cout << "Developer function" << endl;
-}
-// УНИКАЛЬНЫЙ ВЫВОД
-
-
-
-// ВИРТУАЛЬНАЯ ФУНКЦИЯ Employee ДЛЯ ВЫВОДА ВСЕХ ПРОЕКТОВ СОТРУДНИКА
-void Developer::print_your_projects()
-{
-    cout << "print_your_projects" << endl;
-    return;
-}
-// ВИРТУАЛЬНАЯ ФУНКЦИЯ Employee ДЛЯ ВЫВОДА ВСЕХ ПРОЕКТОВ СОТРУДНИКА
-
-
-
-// ВИРТУАЛЬНАЯ ФУНКЦИЯ Employee ДЛЯ МЕНЮ
-vector<company_info> Developer::menu(vector<company_info> info)
-{
-    cout << "1 - print your project" << endl
-         << "2 - change project name" << endl;
-
-    int number;
-    switch (number)
+    for (auto item : information)
     {
-    case 1:
-        this->print_your_projects();
-        break;
-    case 2:
-        this->change_project_name();
-        break;
-    default:
-        break;
+        if (item.developer_name == this->name)
+        {
+            this->print_project(item);
+        }
     }
 }
-// ВИРТУАЛЬНАЯ ФУНКЦИЯ Employee ДЛЯ МЕНЮ
+// ВИРТУАЛЬНАЯ ФУНКЦИЯ ДЛЯ ВЫВОДА ПРОЕКТОВ Developer
 
-
-
-// МЕНЯЕТ НАЗВАНИЕ ПРОЕКТА
-vector<company_info> Developer::change_project_name(vector<company_info> info)
+// ВИРТУАЛЬНАЯ ФУНКЦИЯ МЕНЮ Developer
+void Developer::menu()
 {
-    int number = 0;
-    for (auto item : info)
+    int change = 0;
+
+    while (change != 4)
     {
-        if (item.name == "Dota 2")
+        cout << "Welcome, Goodle Developer" << endl
+             << "1 - print all Google projects" << endl
+             << "2 - print your projects" << endl
+             << "3 - change developer status" << endl
+             << "4 - exit" << endl;
+
+        cin >> change;
+
+        while (change < 1 || change > 4)
         {
-            cout << "Find" << endl;
-            info[number].name = "Doka 3";
+            cout << "Error. Enter again" << endl;
+            cin >> change;
+        }
+
+        switch (change)
+        {
+        case 1:
+            system("clear");
+            this->print_all_project();
             break;
+        case 2:
+            system("clear");
+            this->print_all_user_project();
+            break;
+        case 3:
+            system("clear");
+            this->change_developer_status();
+            break;
+        default:
+            cout << "Goodbye!!!";
+            break;
+        }
+    }
+
+    return;
+}
+// ВИРТУАЛЬНАЯ ФУНКЦИЯ МЕНЮ Developer
+
+// ТЕСТОВАЯ ВИРТУАЛЬНАЯ ФУНКЦИЯ Developer
+void Developer::function_user()
+{
+    cout << "Developer" << endl;
+    return;
+}
+// ТЕСТОВАЯ ВИРТУАЛЬНАЯ ФУНКЦИЯ Developer
+
+// ФУНКЦИЯ ИЗМЕННЕНИЯ developer_status
+void Developer::change_developer_status()
+{
+    int id;
+    cout << "Enter Project ID: ";
+    cin >> id;
+
+    int number = 0;
+    for (auto item : information)
+    {
+        if (item.id == id && item.developer_name == this->name)
+        {
+            cout << endl
+                 << "Project found" << endl;
+
+            cout << "\nDEVELOPER STATUS:" << endl
+                 << "1 - not being developed" << endl
+                 << "2 - is being developed" << endl
+                 << "3 - developed" << endl
+                 << "4 - frozen" << endl
+                 << "Enter: ";
+
+            cin >> information[number].developer_status;
+            while (information[number].developer_status > 4 || information[number].developer_status < 1)
+            {
+                cout << "\nDEVELOPER STATUS:" << endl
+                     << "1 - not being developed" << endl
+                     << "2 - is being developed" << endl
+                     << "3 - developed" << endl
+                     << "4 - frozen" << endl;
+                cout << "Error. Enter again: ";
+
+                cin >> information[number].developer_status;
+            }
         }
         number++;
     }
-    return info;
 }
-// МЕНЯЕТ НАЗВАНИЕ ПРОЕКТА
+// ФУНКЦИЯ ИЗМЕННЕНИЯ developer_status
+
+// ФУНКЦИЯ УДАЛЕНИЯ ПРОЕКТА
+/* void Developer::delete_project()
+{
+    int id, number = 0;
+    bool check = false;
+
+    cout << "Enter project id - ";
+    cin >> id;
+
+    for (auto item : information)
+    {
+        if (item.developer_name == this->name && item.id == id)
+        {
+            this->information.erase(information.begin() + number);
+            check = true;
+        }
+        number++;
+    }
+
+    if (check == false)
+    {
+        cout << "Project not found" << endl;
+    }
+    else
+    {
+        cout << "Project found" << endl;
+    }
+
+    return;
+} */
+// ФУНКЦИЯ УДАЛЕНИЯ ПРОЕКТА

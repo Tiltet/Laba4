@@ -1,25 +1,27 @@
-#include <iostream>
+#pragma once
+#include "Developer.cpp"
+#include "Tester.cpp"
 
-using namespace std;
-
-class Admin : public Employee
+class Admin : public Developer, public Tester
 {
 private:
     
 public:
-    Admin();
+    Admin(string name);
 
-    void function_test();
+    void print_all_user_project(); // ВИРТУАЛЬНАЯ ФУНКЦИЯ ДЛЯ ВЫВОДА ПРОЕКТОВ ЮЗЕРА
+    void menu();                   // ВИРТУАЛЬНАЯ ФУНКЦИЯ МЕНЮ ЮЗЕРА
+    void function_user();          // ВИРТУАЛЬНАЯ ФУНКЦИЯ
 
     ~Admin();
 };
 
-Admin::Admin()
+Admin::Admin(string name) : Employee(name), Developer(name), Tester(name)
 {
-
+    this->name = name;
+    cout << "Конструктор Admin" << endl;
 }
 
 Admin::~Admin()
 {
-
 }

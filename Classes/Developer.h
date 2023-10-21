@@ -1,30 +1,29 @@
 #pragma once
-#include <iostream>
-#include <vector>
+#include "Employee.cpp"
 
 using namespace std;
 
-class Developer : public Employee
+class Developer : public virtual Employee
 {
 private:
-    
+
 public:
-    Developer();
+    Developer(string name);
 
-    void function_test(); // виртуальная функция Employee
-    void print_your_projects(); // виртуальная функция Employee для вывода все проектов сотрудника
-    vector<company_info> menu(vector<company_info> info); // виртуальная функция Employee для меню
+    void print_all_user_project() override;      // ВИРТУАЛЬНАЯ ФУНКЦИЯ ДЛЯ ВЫВОДА ПРОЕКТОВ ЮЗЕРА
+    void menu() override;                        // ВИРТУАЛЬНАЯ ФУНКЦИЯ МЕНЮ ЮЗЕРА
+    void function_user() override;               // ТЕСТОВАЯ ВИРТУАЛЬНАЯ ФУНКЦИЯ Developer
 
-
-    void developer_function(); // тестовая функция Developer
-    vector<company_info> change_project_name(vector<company_info> info); // меняет название проекта
+    void change_developer_status();              // ФУНКЦИЯ ИЗМЕННЕНИЯ developer_status
+    // void delete_project();                    // ФУНКЦИЯ УДАЛЕНИЯ ПРОЕКТА
 
     ~Developer();
 };
 
-Developer::Developer()
+Developer::Developer(string name) : Employee(name)
 {
-
+    cout << endl << "Конструктор Developer" << endl;
+    this->menu();
 }
 
 Developer::~Developer()
