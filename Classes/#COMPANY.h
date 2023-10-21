@@ -20,13 +20,12 @@ private:
     vector<message> messages;
     vector<company_info> info;
 public:
-
     Company();
 
     void print_information(); // выводит всю информацию о компании
     void print_messages(); // выводит все сообщения компании
 
-    void menu(int number); // меню выбора класса
+    void menu(int number, vector<company_info> info); // меню выбора класса
 
     ~Company();
 };

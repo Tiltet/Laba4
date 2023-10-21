@@ -22,7 +22,7 @@ public:
 
     virtual void function_test() = 0;
     virtual void print_your_projects() = 0;
-    virtual void menu() = 0;
+    virtual vector<company_info> menu(vector<company_info> info) = 0;
 
     ~Employee();
 };

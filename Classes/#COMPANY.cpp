@@ -32,7 +32,7 @@ void Company::print_messages()
 
 
 // МЕНЮ ВЫБОРА КЛАССА
-void Company::menu(int number)
+void Company::menu(int number, vector<company_info> info)
 {
     if (number == 1)
     {
@@ -41,8 +41,10 @@ void Company::menu(int number)
         Developer User;
         User.developer_function();
 
-        this->info = User.change_project_name(this->info);
-        this->print_information();
+        User.menu(info);
+
+        // this->info = User.change_project_name(this->info);
+        // this->print_information();
     }
     else if (number == 2)
     {

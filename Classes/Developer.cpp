@@ -13,32 +13,45 @@ void Developer::function_test()
 
 
 
-// УНИКАЛЬНЫЙ ВЫВОД 
+// УНИКАЛЬНЫЙ ВЫВОД
 void Developer::developer_function()
 {
     cout << "Developer function" << endl;
 }
-// УНИКАЛЬНЫЙ ВЫВОД 
+// УНИКАЛЬНЫЙ ВЫВОД
 
 
 
-// Виртуальная функция Employee для вывода все проектов сотрудника
+// ВИРТУАЛЬНАЯ ФУНКЦИЯ Employee ДЛЯ ВЫВОДА ВСЕХ ПРОЕКТОВ СОТРУДНИКА
 void Developer::print_your_projects()
 {
     cout << "print_your_projects" << endl;
     return;
 }
-// Виртуальная функция Employee для вывода все проектов сотрудника
+// ВИРТУАЛЬНАЯ ФУНКЦИЯ Employee ДЛЯ ВЫВОДА ВСЕХ ПРОЕКТОВ СОТРУДНИКА
 
 
 
- // виртуальная функция Employee для меню
- void Developer::menu()
- {
-    cout << "menu" << endl;
-    return;
- }
-// виртуальная функция Employee для меню
+// ВИРТУАЛЬНАЯ ФУНКЦИЯ Employee ДЛЯ МЕНЮ
+vector<company_info> Developer::menu(vector<company_info> info)
+{
+    cout << "1 - print your project" << endl
+         << "2 - change project name" << endl;
+
+    int number;
+    switch (number)
+    {
+    case 1:
+        this->print_your_projects();
+        break;
+    case 2:
+        this->change_project_name();
+        break;
+    default:
+        break;
+    }
+}
+// ВИРТУАЛЬНАЯ ФУНКЦИЯ Employee ДЛЯ МЕНЮ
 
 
 

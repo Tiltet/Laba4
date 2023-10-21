@@ -10,26 +10,21 @@
 using namespace std;
 
 int main()
-{    
+{
     system("clear");
     vector<company_info> info;
 
-    // Admin admin;
-    // Director director;
-    // Meneger meneger;
-    // Tester tester;
- 
-    // admin.test_function();
-    // developer.test_function();
-    // director.function_test();
-    // meneger.funtcion_test();
-    // tester.funtcion_test();
-
     Company google;
 
-    google.menu(1);
+    int number;
 
-    // google.print_messages();
+    cout << "Enter number" << endl
+         << "1 - developer" << endl
+         << "2 - tester" << endl;
+
+    cin >> number;
+
+    google.menu(number, info);
 
     return 0;
 }

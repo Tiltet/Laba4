@@ -13,7 +13,7 @@ public:
 
     void function_test(); // виртуальная функция Employee
     void print_your_projects(); // виртуальная функция Employee для вывода все проектов сотрудника
-    void menu(); // виртуальная функция Employee для меню
+    vector<company_info> menu(vector<company_info> info); // виртуальная функция Employee для меню
 
 
     void developer_function(); // тестовая функция Developer
