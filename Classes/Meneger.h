@@ -1,3 +1,4 @@
+// КЛАСС МЕНЕДЖЕРА ВСЕ РАБОТАЕТ
 #pragma once
 #include "Employee.cpp"
 
@@ -15,7 +16,6 @@ public:
     void function_user() override;               // ТЕСТОВАЯ ВИРТУАЛЬНАЯ ФУНКЦИЯ Developer
 
     void change_developer();                     // ФУНКЦИЯ ИЗМЕННЕНИЯ developer
-    // void delete_project();                    // ФУНКЦИЯ УДАЛЕНИЯ ПРОЕКТА
 
     ~Meneger();
 };
@@ -23,7 +23,6 @@ public:
 Meneger::Meneger(string name) : Employee(name)
 {
     cout << endl << "Конструктор Meneger" << endl;
-    this->menu();
 }
 
 Meneger::~Meneger()

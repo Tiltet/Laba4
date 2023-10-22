@@ -74,6 +74,7 @@ void Tester::menu()
 // ФУНКЦИЯ ИЗМЕНЕНИЯ test_status
 void Tester::change_test_status()
 {
+    bool check = false;
     int id, test_status;
     cout << "Enter Project ID: ";
     cin >> id;
@@ -81,11 +82,8 @@ void Tester::change_test_status()
     int number = 0;
     for (auto item : information)
     {
-        if (item.id == id && item.tester_name == this->name)
+        if (item.id == id && (item.tester_name == this->name || this->name == "admin"))
         {
-            cout << endl
-                 << "Project found" << endl;
-
             cout << "\nTEST STATUS:" << endl
                  << "0 - not testing" << endl
                  << "1 - testing" << endl;
@@ -110,12 +108,22 @@ void Tester::change_test_status()
             {
                 information[number].test_status = true;
             }
-        }
-        else
-        {
-            cout << "Project not found" << endl;
+            check = true;
+
+            break;
         }
         number++;
+    }
+
+    if (check == false)
+    {
+        cout << endl
+             << "Project not found" << endl;
+    }
+    else
+    {
+        cout << endl
+             << "Project found" << endl; 
     }
 }
 

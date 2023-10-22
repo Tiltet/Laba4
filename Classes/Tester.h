@@ -20,9 +20,7 @@ public:
 Tester::Tester(string name) : Employee(name)
 {
     this->name = name;
-    cout << endl << "Конструктор Tester\n" << endl;
-
-    this->menu();
+    cout << endl << "Конструктор Tester" << endl;
 }
 
 Tester::~Tester()

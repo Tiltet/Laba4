@@ -15,8 +15,8 @@ void main_menu(string login, string password);
 int main()
 {
     system("clear");
-    string login = "tester";
-    string password = "tester";
+    string login = "admin";
+    string password = "admin";
 
     // cout << "Enter your Login: ";
     // cin >> login;
@@ -39,28 +39,49 @@ void main_menu(string login, string password)
     {
         if (login == "developer" || password == "developer")
         {
+            cout << endl << "Developer" << endl;
             cout << "Enter your name: ";
             getline(cin, name);
 
-            Developer developer(name);
+            Developer user(name);
+            user.menu();
             break;
         }
         else if (login == "tester" || password == "tester")
         {
+            cout << endl << "Tester" << endl;
             cout << "Enter your name: ";
             getline(cin, name);
 
-            Tester tester(name);
+            Tester user(name);
+            user.menu();
             break;
         }
         else if (login == "meneger" || password == "meneger")
         {
+            cout << endl << "Meneger" << endl;
+            cout << "Enter your name: ";
+            getline(cin, name);
+
+            Meneger user(name);
+            user.menu();
+            break;
         }
         else if (login == "admin" || password == "admin")
         {
+            cout << endl << "Admin" << endl;
+            name = "admin";
+
+            Admin user(name);
+            user.menu();
+            break;
         }
         else if (login == "director" || password == "director")
         {
+            cout << endl << "Director" << endl;
+            name = "admin";
+
+            
         }
         else
         {

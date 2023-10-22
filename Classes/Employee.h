@@ -42,6 +42,7 @@ Employee::Employee(string name)
 {
     this->name = name;
 
+    // ДОБАВЛЕНИЕ ПРОЕКТОВ, ЧТОБЫ НЕ ВВОДИТЬ С КЛАВИАТУРЫ
     // ДОБАВИМ ПЕРВЫЙ ПРОЕКТ
     projects project;
     project.id = 111111;
@@ -50,7 +51,7 @@ Employee::Employee(string name)
     project.meneger_name = "meneger 1";
     project.tester_name = "tester 1";
     project.test_status = true;
-    project.developer_status = 5;
+    project.developer_status = 1;
 
     this->information.push_back(project);
     // ДОБАВИМ ПЕРВЫЙ ПРОЕКТ
@@ -62,14 +63,17 @@ Employee::Employee(string name)
     project.meneger_name = "meneger 2";
     project.tester_name = "tester 2";
     project.test_status = true;
-    project.developer_status = 4;
+    project.developer_status = 2;
 
     this->information.push_back(project);
     // ДОБАВИМ ВТОРОЙ ПРОЕКТ
+    // ДОБАВЛЕНИЕ ПРОЕКТОВ, ЧТОБЫ НЕ ВВОДИТЬ С КЛАВИАТУРЫ
 
     cout << endl << "Конструктор Employee" << endl;
 }
 
 Employee::~Employee()
 {
+    information.clear();
+    // cout << endl << "Деконструктор Employee" << endl;
 }

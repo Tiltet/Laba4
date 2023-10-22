@@ -23,7 +23,6 @@ public:
 Developer::Developer(string name) : Employee(name)
 {
     cout << endl << "Конструктор Developer" << endl;
-    this->menu();
 }
 
 Developer::~Developer()

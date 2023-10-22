@@ -27,7 +27,8 @@ void Developer::menu()
 
     while (change != 4)
     {
-        cout << "Welcome, Goodle Developer" << endl
+        cout << endl
+             << "Welcome, Goodle Developer" << endl
              << "1 - print all Google projects" << endl
              << "2 - print your projects" << endl
              << "3 - change developer status" << endl
@@ -83,10 +84,12 @@ void Developer::change_developer_status()
     int number = 0;
     for (auto item : information)
     {
-        if (item.id == id && item.developer_name == this->name)
+        if (item.id == id && (item.developer_name == this->name || this->name == "admin"))
         {
             cout << endl
                  << "Project found" << endl;
+
+            this->print_project(information[number]);
 
             cout << "\nDEVELOPER STATUS:" << endl
                  << "1 - not being developed" << endl
