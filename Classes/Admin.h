@@ -2,6 +2,7 @@
 #pragma once
 #include "Developer.cpp"
 #include "Tester.cpp"
+#include "Meneger.cpp"
 
 class Admin : public Developer, public Tester, public Meneger
 {
@@ -19,7 +20,7 @@ public:
 
 Admin::Admin(string name) : Employee(name), Developer(name), Tester(name), Meneger(name)
 {
-    cout << endl << "Конструктор Admin" << endl;
+    // cout << endl << "Конструктор Admin" << endl;
 }
 
 Admin::~Admin()

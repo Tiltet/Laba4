@@ -1,3 +1,4 @@
+// КЛАСС РАЗРАБОТЧИКА
 #pragma once
 #include "Employee.cpp"
 
@@ -15,14 +16,13 @@ public:
     void function_user() override;               // ТЕСТОВАЯ ВИРТУАЛЬНАЯ ФУНКЦИЯ Developer
 
     void change_developer_status();              // ФУНКЦИЯ ИЗМЕННЕНИЯ developer_status
-    // void delete_project();                    // ФУНКЦИЯ УДАЛЕНИЯ ПРОЕКТА
 
     ~Developer();
 };
 
 Developer::Developer(string name) : Employee(name)
 {
-    cout << endl << "Конструктор Developer" << endl;
+    // cout << endl << "Конструктор Developer" << endl;
 }
 
 Developer::~Developer()

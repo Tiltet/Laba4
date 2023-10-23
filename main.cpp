@@ -7,6 +7,7 @@
 #include "Classes/Meneger.cpp"
 #include "Classes/Tester.cpp"
 #include "Classes/Admin.cpp"
+#include "Classes/Director.cpp"
 
 using namespace std;
 
@@ -15,15 +16,15 @@ void main_menu(string login, string password);
 int main()
 {
     system("clear");
-    string login = "admin";
-    string password = "admin";
+    string login;
+    string password;
 
-    // cout << "Enter your Login: ";
-    // cin >> login;
+    cout << "Enter your Login: ";
+    cin >> login;
 
-    // cout << "Enter your Password: ";
-    // cin >> password;
-    // rewind(stdin);
+    cout << "Enter your Password: ";
+    cin >> password;
+    rewind(stdin);
 
     main_menu(login, password);
 
@@ -81,7 +82,9 @@ void main_menu(string login, string password)
             cout << endl << "Director" << endl;
             name = "admin";
 
-            
+            Director user(name);
+            user.menu();
+            break;
         }
         else
         {

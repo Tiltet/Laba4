@@ -22,7 +22,7 @@ public:
 
 Meneger::Meneger(string name) : Employee(name)
 {
-    cout << endl << "Конструктор Meneger" << endl;
+    // cout << endl << "Конструктор Meneger" << endl;
 }
 
 Meneger::~Meneger()

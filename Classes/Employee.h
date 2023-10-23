@@ -33,7 +33,6 @@ public:
     virtual void function_user() = 0;               // ВИРТУАЛЬНАЯ ФУНКЦИЯ
 
     void print_all_project();                       // ФУНКЦИЯ ВЫВОДА ВСЕХ ПРОЕКТОВ КОМПАНИИ
-    // void add_new_project();                      // ФУНКЦИЯ ДОБАВЛЕНИЯ НОВОГО ПРОЕКТА
 
     ~Employee();
 };
@@ -69,7 +68,7 @@ Employee::Employee(string name)
     // ДОБАВИМ ВТОРОЙ ПРОЕКТ
     // ДОБАВЛЕНИЕ ПРОЕКТОВ, ЧТОБЫ НЕ ВВОДИТЬ С КЛАВИАТУРЫ
 
-    cout << endl << "Конструктор Employee" << endl;
+    // cout << endl << "Конструктор Employee" << endl;
 }
 
 Employee::~Employee()

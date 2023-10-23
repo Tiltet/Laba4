@@ -11,27 +11,27 @@ void Admin::print_all_user_project()
 }
 // ВИРТУАЛЬНАЯ ФУНКЦИЯ ДЛЯ ВЫВОДА ПРОЕКТОВ Admin
 
-
 // ТЕСТОВАЯ ВИРТУАЛЬНАЯ ФУНКЦИЯ Admin
 void Admin::function_user()
 {
-    cout << endl << "Admin" << endl;
+    cout << endl
+         << "Admin" << endl;
     return;
 }
 // ТЕСТОВАЯ ВИРТУАЛЬНАЯ ФУНКЦИЯ Admin
 
-
 // ВИРТУАЛЬНАЯ ФУНКЦИЯ МЕНЮ Admin
 void Admin::menu()
 {
-    cout << endl << "Admin menu" << endl;
+    cout << endl
+         << "Admin menu" << endl;
 
-        int change = 0;
+    int change = 0;
 
     while (change != 5)
     {
         cout << endl
-             << "Welcome, Goodle Administrator" << endl
+             << "Welcome, Goodle Admin" << endl
              << "1 - print all Google projects" << endl
              << "2 - change developer status" << endl
              << "3 - change test status" << endl
